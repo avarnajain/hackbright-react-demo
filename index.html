@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+    <title>React Demos</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 0;
+            padding: 50px 0 50px 100px;
+            color: white;
+            background: #222 url("react.svg") no-repeat 20px center / 70px;
+        }
+
+        dl {
+            margin-left: 100px;
+        }
+
+        dt a {
+            font-weight: bold;
+            color: #222;
+            text-decoration: none;
+        }
+
+        dd {
+            margin-bottom: 1em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+<h1>React Demos</h1>
+
+<dl>
+    <dt><a href="hello/index.html">Hello</a></dt>
+    <dd>Simple "Hello, World".</dd>
+
+    <dt><a href="hello-2/index.html">Hello-2</a></dt>
+    <dd>Reusable "Hello World", with configurable text.</dd>
+</dl>
+
+<script>
+    // bad monkey. read directions!
+    if (window.location.href.slice(0, 4) != "http") {
+        const dl = document.querySelector("dl");
+        dl.innerHTML = (
+            "<b>OH SNAP.</b> You must run this demo using SimpleHTTPServer.<br><br>" +
+            "In <i>react-demo</i> directory, run <i>python -m SimpleHTTPServer</i>" +
+            " and visit as <a href='http://localhost:8000'>http://localhost:8000</a>."
+        );
+    }
+</script>
+</body>
+</html>
